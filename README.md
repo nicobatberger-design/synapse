@@ -9,6 +9,15 @@ Synapse is a tiny, dependency-free framework (Python stdlib only) for giving an 
 
 Everything becomes **typed nodes** connected by **typed edges**, so an agent (or you) can ask: *"what surrounds this rule?"* and get its proof notes, the procedures that apply it, and the projects it concerns — in milliseconds, offline, with zero API calls.
 
+## Inspiration & prior art
+
+Synapse stands on the shoulders of two excellent tools:
+
+- **[Obsidian](https://obsidian.md)** — its `[[wikilink]]` culture proved that a personal knowledge base should be plain files you own forever. Synapse reads that exact format.
+- **Code-graph generators** (such as Graphify) — they showed how much value lives in an automatically extracted, visual map of a codebase.
+
+Synapse simply **complements** them for the AI-agent use case: edges carry *types* (proves, applies, references...), the graph is *queryable by a program* rather than only visual, JSON brains join the party alongside markdown notes, and the graph is rebuilt automatically so it never goes stale. Use all three together — they get along fine.
+
 ## Philosophy
 
 **Learn once, capitalize immediately, execute in minutes.**

@@ -1,0 +1,22 @@
+{
+  "policy": "never_indexed",
+  "description": "Anything matching these categories must never be indexed, embedded, exported, written into the graph, or persisted by the router. The graph builder excludes brains/private/ unconditionally; the router stores a flag, not the text.",
+  "categories": [
+    {
+      "name": "credentials",
+      "keywords": ["password", "api key", "token", "secret", "credential", "private key"]
+    },
+    {
+      "name": "personal_identity",
+      "keywords": ["home address", "phone number", "id card", "passport", "social security"]
+    },
+    {
+      "name": "finances",
+      "keywords": ["bank account", "iban", "credit card", "salary", "invoice amount"]
+    },
+    {
+      "name": "health",
+      "keywords": ["diagnosis", "medication", "medical record"]
+    }
+  ]
+}

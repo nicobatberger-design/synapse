@@ -1,0 +1,40 @@
+{
+  "_schema": {
+    "id": "kebab-case unique id (node id becomes rule:<id>)",
+    "title": "short human title",
+    "statement": "the rule itself, one imperative sentence",
+    "context": "list of trigger keywords/phrases — when should this rule surface?",
+    "source": "note path(s) proving the rule (join several with '+') -> 'proves' edges",
+    "links": "list of rule:/procedure:/note ids -> 'applies' or 'concerns' edges",
+    "severity": "info | warning | blocking"
+  },
+  "rules": [
+    {
+      "id": "review-before-send",
+      "title": "Always review before sending",
+      "statement": "Always re-read any outbound message or document once before sending it.",
+      "context": ["send", "email", "message", "publish", "outbound"],
+      "source": "example.md",
+      "links": ["procedure:deploy-website"],
+      "severity": "blocking"
+    },
+    {
+      "id": "backup-before-migration",
+      "title": "Backup before any migration",
+      "statement": "Never run a data migration without a verified backup taken first.",
+      "context": ["migration", "database", "schema", "upgrade"],
+      "source": "example.md",
+      "links": ["procedure:weekly-backup"],
+      "severity": "blocking"
+    },
+    {
+      "id": "one-change-at-a-time",
+      "title": "One change at a time",
+      "statement": "When debugging, change exactly one variable between two attempts.",
+      "context": ["debug", "troubleshoot", "regression", "bisect"],
+      "source": "",
+      "links": [],
+      "severity": "info"
+    }
+  ]
+}

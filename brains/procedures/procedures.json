@@ -1,0 +1,37 @@
+{
+  "_schema": {
+    "id": "kebab-case unique id (node id becomes procedure:<id>)",
+    "name": "short human name",
+    "trigger": "when to run it — quoted phrases are explicit triggers",
+    "steps": "ordered list of concrete steps (step 1 is the entry command)",
+    "source": "note path(s) documenting the procedure -> 'documents' edges",
+    "links": "list of rule:/procedure:/note ids -> 'applies' or 'concerns' edges"
+  },
+  "procedures": [
+    {
+      "id": "deploy-website",
+      "name": "Deploy the website",
+      "trigger": "\"deploy the site\" or after merging to the main branch",
+      "steps": [
+        "Run the test suite and confirm it is green",
+        "Build the production bundle",
+        "Upload the bundle to the hosting provider",
+        "Smoke-test the live homepage and one deep link"
+      ],
+      "source": "example.md",
+      "links": ["rule:review-before-send"]
+    },
+    {
+      "id": "weekly-backup",
+      "name": "Weekly backup",
+      "trigger": "\"run the backup\" or every Sunday morning",
+      "steps": [
+        "Export the database to a dated archive",
+        "Copy the archive to two independent locations",
+        "Verify the archive opens and spot-check one record"
+      ],
+      "source": "",
+      "links": ["rule:backup-before-migration"]
+    }
+  ]
+}

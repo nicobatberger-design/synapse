@@ -1,0 +1,16 @@
+# Generated output
+graph.json
+
+# Candidate queues are per-user working state
+brains/*/_candidates.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
